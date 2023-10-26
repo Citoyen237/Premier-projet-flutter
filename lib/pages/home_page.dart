@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'event_page.dart';
+//import 'event_page.dart';
 class HomePage extends StatelessWidget {
   const HomePage({
     super.key,
@@ -7,11 +7,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Asynconf 2022"),
-      ),
-      body: Center(
+    return Center(
 
         //culumn elementsous les autre
         child: Column(
@@ -33,30 +29,8 @@ class HomePage extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
             ),
-            const Padding(padding: EdgeInsets.only(top: 20)),
-            ElevatedButton.icon(
-              style:const ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(Colors.green),
-                padding: MaterialStatePropertyAll(EdgeInsets.all(20))
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context, 
-                  PageRouteBuilder(
-                    pageBuilder: (_, __, ___) => const EventPage()
-                    ),
-                  );
-              } , 
-              label:const Text("Afficher le planning",
-              style:TextStyle(
-                fontSize: 20
-              ) ,
-              ),
-              icon: const Icon(Icons.calendar_month),
-              ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
